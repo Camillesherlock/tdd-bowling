@@ -29,5 +29,14 @@ public class BowlingGameTest {
         getScore scoreResult = new getScore();
         //Then
         assertEquals(scoreResult.getScoreOfBowing(score),97);
-    } 
+    }
+    @Test
+    void getScoreWithAddTenPinTen(){
+        //Given
+        int score[][] = {{10},{6,4,3},{8,1},{3,6},{4,4},{5,2},{6,6},{1,1},{5,3},{8,2,4}};
+        //When
+        getScore scoreResult = new getScore();
+        //Then
+        assertEquals(scoreResult.getScoreOfBowing(score),102);
+    }
 }
